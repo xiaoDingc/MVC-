@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <title>CreateEmployee</title>
+    
+</head>
+
+<body>
+    <div>
+        <form action="/Employee/SaveEmployee" method="post">
+            First Name: <input type="text" id="TxtFName" name="FirstName" value="" />@Html.ValidationMessage("FirstName")<br />
+            Last Name: <input type="text" id="TxtLName" name="LastName" value="" />@Html.ValidationMessage("LastName")<br />
+            Salary: <input type="text" id="TxtSalary" name="Salary" value="" />@Html.ValidationMessage("Salary")<br />
+            <input type="submit" name="BtnSubmit" value="Save Employee" />
+            <input type="button" name="BtnReset" value="Reset"  onclick="ResetForm()"/>
+            <input type="submit" name="BtnSubmit" value="Cancel" />
+        </form>
+    </div>
+
+    <script>
+        function ResetForm() {
+            alert("1234");
+            $("#TxtFName").val("");
+            $("#TxtLName").val("");
+            $("#TxtSalary").val("");
+        }
+    </script>
+</body>
+</html>

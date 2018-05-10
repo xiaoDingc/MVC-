@@ -1,4 +1,5 @@
-﻿using MVC学习.Models;
+﻿using MVC学习.Data_Access_Layer;
+using MVC学习.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,25 +11,19 @@ namespace MVC学习.ViewModels
     {
         public List<Employee> GetEmployees()
         {
-            List<Employee> employees = new List<Employee>();
-                  Employee emp = new Employee();
-                    emp.FirstName = "johnson";
-                  emp.LastName = " fernandes";
-                    emp.Salary = 14000;
-                    employees.Add(emp);
-           
-            emp = new Employee();
-                    emp.FirstName = "michael";
-                 emp.LastName = "jackson";
-                  emp.Salary = 16000;
-                    employees.Add(emp);
-            emp = new Employee();
-                   emp.FirstName = "robert";
-                  emp.LastName = " pattinson";
-                   emp.Salary = 20000;
-                    employees.Add(emp);
+            SalesERPDAL salesDal = new SalesERPDAL();
+            return salesDal.Employees.ToList();
               
-       return employees;
+        }
+
+        public Employee SaveEmployee(Employee e)
+        {
+            using (var salesDal=new SalesERPDAL())
+            {
+                salesDal.Employees.Add(e);
+                salesDal.SaveChanges();
+                return e;
+            }
         }
        
     }

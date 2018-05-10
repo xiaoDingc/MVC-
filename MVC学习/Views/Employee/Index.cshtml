@@ -1,5 +1,5 @@
-﻿@using MVC学习.ViewModels 
-@model EmployeeListViewModel 
+﻿@using MVC学习.ViewModels
+@model EmployeeListViewModel
 @{ Layout = null; }
 <!DOCTYPE html>
 <html>
@@ -10,8 +10,10 @@
 </head>
 
 <body>
-    Hello @Model.UserName
+
     <hr />
+    <a href="/Employee/AddNew">Add New</a>
+
     <div>
         <table>
 
@@ -24,11 +26,12 @@
             </tr>
             @foreach (EmployeeViewModel item in Model.Employees)
             {
-              <tr>
+                <tr>
                     <td>
-                        @item.EmployeeName </td>
+                        @item.EmployeeName
+                    </td>
                     <td style="background-color:@item.SalaryColor"> @item.Salary </td>
-              </tr>
+                </tr>
             }
 
         </table>

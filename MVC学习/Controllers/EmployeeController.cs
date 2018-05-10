@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 namespace MVC学习.Controllers
 {
-    public class TestController : Controller
+    public class EmployeeController : Controller
     {
         // GET: Test
         //public ActionResult Index()
@@ -30,7 +30,7 @@ namespace MVC学习.Controllers
         {
             return "great simple";
         }
-        public ActionResult GetView()
+        public ActionResult Index()
         {
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
 
@@ -56,8 +56,34 @@ namespace MVC学习.Controllers
                 empViewModels.Add(empViewModel);
             }
             employeeListViewModel.Employees = empViewModels;
-            employeeListViewModel.UserName = "Admin";
+            //employeeListViewModel.UserName = "Admin";
             return View(employeeListViewModel);
+        }
+
+        public ActionResult AddNew()
+        {
+            return View("AddNew");
+        }
+        public ActionResult SaveEmployee(Employee e,string BtnSubmit)
+        {
+            switch (BtnSubmit)
+            {
+                case "Save Employee":
+                    if (ModelState.IsValid)
+                    {
+                        EmployeeBusinessLayer empBal = new EmployeeBusinessLayer();
+                        empBal.SaveEmployee(e);
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        return View("AddNew");
+                    }
+                  
+                case "Cancel":
+                    return RedirectToAction("AddNew");
+            }
+            return new EmptyResult();
         }
     }
 }
