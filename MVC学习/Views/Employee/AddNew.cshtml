@@ -1,14 +1,17 @@
-﻿@{
+﻿@using MVC学习.ViewModels
+@model CreateEmployeeViewModel
+@{ 
     Layout = null;
 }
 <!DOCTYPE html>
 
 <html>
-<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
 <head>
 
     <meta name="viewport" content="width=device-width" />
-
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/Validations.js"></script>
     <title>CreateEmployee</title>
     
 </head>
@@ -16,12 +19,12 @@
 <body>
     <div>
         <form action="/Employee/SaveEmployee" method="post">
-            First Name: <input type="text" id="TxtFName" name="FirstName" value="" />@Html.ValidationMessage("FirstName")<br />
-            Last Name: <input type="text" id="TxtLName" name="LastName" value="" />@Html.ValidationMessage("LastName")<br />
-            Salary: <input type="text" id="TxtSalary" name="Salary" value="" />@Html.ValidationMessage("Salary")<br />
-            <input type="submit" name="BtnSubmit" value="Save Employee" />
+            First Name: <input type="text" id="TxtFName" name="FirstName" value="@Model.FirstName" />@Html.ValidationMessage("FirstName")<br />
+            Last Name: <input type="text" id="TxtLName" name="LastName" value="@Model.LastName" />@Html.ValidationMessage("LastName")<br />
+            Salary: <input type="text" id="TxtSalary" name="Salary" value="@Model.Salary" />@Html.ValidationMessage("Salary")<br />
+            <input type="submit" name="BtnSubmit" value="Save Employee" onclick="IsValid()" />
             <input type="button" name="BtnReset" value="Reset"  onclick="ResetForm()"/>
-            <input type="submit" name="BtnSubmit" value="Cancel" />
+            <input type="submit" name="BtnSubmit" value="Cancel"  />
         </form>
     </div>
 

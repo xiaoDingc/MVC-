@@ -9,6 +9,17 @@ namespace MVC学习.ViewModels
 {
     public class EmployeeBusinessLayer
     {
+        public bool IsValidUser(UserDetails u)
+        {
+            if (u.UserName=="Admin"& u.Password=="Admin")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public List<Employee> GetEmployees()
         {
             SalesERPDAL salesDal = new SalesERPDAL();

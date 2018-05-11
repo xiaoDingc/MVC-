@@ -30,9 +30,11 @@ namespace MVC学习.Controllers
         {
             return "great simple";
         }
+        [Authorize]
         public ActionResult Index()
         {
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
+            employeeListViewModel.UserName = User.Identity.Name;
 
             EmployeeBusinessLayer empBal = new EmployeeBusinessLayer();
 
@@ -62,7 +64,7 @@ namespace MVC学习.Controllers
 
         public ActionResult AddNew()
         {
-            return View("AddNew");
+            return View("AddNew",new CreateEmployeeViewModel());
         }
         public ActionResult SaveEmployee(Employee e,string BtnSubmit)
         {
@@ -77,7 +79,18 @@ namespace MVC学习.Controllers
                     }
                     else
                     {
-                        return View("AddNew");
+                        CreateEmployeeViewModel vm = new CreateEmployeeViewModel();
+                        vm.FirstName = e.FirstName;
+                        vm.LastName = e.LastName;
+                        if(e.Salary.ToString() !="")
+                        {
+                            vm.Salary = e.Salary.ToString();
+                        }
+                        else
+                        {
+                            vm.Salary = ModelState["Salary"].Value.AttemptedValue;
+                        }
+                        return View("AddNew",vm);
                     }
                   
                 case "Cancel":

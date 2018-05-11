@@ -1,0 +1,28 @@
+﻿@model MVC学习.Models.UserDetails
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    @Html.ValidationMessage("CredentialError", new {style="Color:red"})
+   @using (Html.BeginForm("DoLogin","Authentication",FormMethod.Post))
+   {
+       @Html.LabelFor(x=>x.UserName)
+       @Html.TextBoxFor(x=>x.UserName)
+       @Html.ValidationMessageFor(x=>x.UserName)
+       <br />
+       @Html.LabelFor(x=>x.Password)
+       @Html.TextBoxFor(x=>x.Password)
+       <br />
+       <input type="submit" name="BtnSubmit" value="Login"/>
+   }
+</body>
+</html>
