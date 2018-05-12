@@ -1,0 +1,24 @@
+﻿@using MVC学习.ViewModels
+@model BaseViewModel
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@RenderSection("TitleSection")</title>
+    @RenderSection("HeaderSection",false)
+</head>
+<body>
+    <div style="text-align:left">
+      Hello, @Model.UserName
+     <a href="~/Authentication/Logout">Logout</a>
+    </div>
+    <hr />
+        <div>
+            @RenderSection("ContentBody")
+        </div>
+        <div>
+           @Html.Partial("Footer",Model.FooterData)
+        </div>
+</body>
+</html>

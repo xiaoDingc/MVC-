@@ -1,22 +1,19 @@
 ﻿@using MVC学习.ViewModels
 @model EmployeeListViewModel
-@{ Layout = null; }
-<!DOCTYPE html>
-<html>
+@{
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
 
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>MyView</title>
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/jquery.validate.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-</head>
+@section  TitleSection
+ {
+    MyView
+}
 
-<body>
-    <div style="text-align:left"> Hello, @Model.UserName </div>
-    <div><a href="~/Authentication/Logout">Logout</a></div>
-    <hr />
-    <a href="/Employee/AddNew">Add New</a>
+@section ContentBody
+{
+    @{
+        Html.RenderAction("GetAddNewLink");
+    }
 
     <div>
         <table>
@@ -41,7 +38,5 @@
         </table>
 
     </div>
+}
 
-</body>
-
-</html>

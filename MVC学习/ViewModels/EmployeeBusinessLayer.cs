@@ -9,15 +9,19 @@ namespace MVC学习.ViewModels
 {
     public class EmployeeBusinessLayer
     {
-        public bool IsValidUser(UserDetails u)
+        public UserStatus IsValidUser(UserDetails u)
         {
-            if (u.UserName=="Admin"& u.Password=="Admin")
+            if (u.UserName=="Admin"&&u.Password=="Admin")
             {
-                return true;
+                return UserStatus.AuthenticatedAdmin;
+            }
+            else if(u.UserName=="Sukesh"&& u.Password == "Sukesh")
+            {
+                return UserStatus.AuthenticatedUser;
             }
             else
             {
-                return false;
+                return UserStatus.NonAuthenticatedUser;
             }
         }
         public List<Employee> GetEmployees()

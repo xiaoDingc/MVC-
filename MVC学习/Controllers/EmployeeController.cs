@@ -1,4 +1,5 @@
-﻿using MVC学习.Models;
+﻿using MVC学习.Filter;
+using MVC学习.Models;
 using MVC学习.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -31,10 +32,14 @@ namespace MVC学习.Controllers
             return "great simple";
         }
         [Authorize]
+        [HeaderFooterFilter]
         public ActionResult Index()
         {
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
-            employeeListViewModel.UserName = User.Identity.Name;
+            //employeeListViewModel.UserName = User.Identity.Name;
+            //employeeListViewModel.FooterData = new FooterViewModel();
+            //employeeListViewModel.FooterData.CompanyName= "StepByStepSchools";//Can be set to dynamic value
+            //employeeListViewModel.FooterData.Year = DateTime.Now.Year.ToString();
 
             EmployeeBusinessLayer empBal = new EmployeeBusinessLayer();
 
@@ -61,11 +66,20 @@ namespace MVC学习.Controllers
             //employeeListViewModel.UserName = "Admin";
             return View(employeeListViewModel);
         }
-
+        [AdminFilter]
+        [HeaderFooterFilter]
         public ActionResult AddNew()
         {
-            return View("AddNew",new CreateEmployeeViewModel());
+            CreateEmployeeViewModel employeeListViewModel = new CreateEmployeeViewModel();
+            //employeeListViewModel.UserName = User.Identity.Name;
+            //employeeListViewModel.FooterData = new FooterViewModel();
+            //employeeListViewModel.FooterData.CompanyName = "StepByStepSchools";//Can be set to dynamic value
+            //employeeListViewModel.FooterData.Year = DateTime.Now.Year.ToString();
+
+            return View("AddNew", employeeListViewModel);
         }
+        [AdminFilter]
+        [HeaderFooterFilter]
         public ActionResult SaveEmployee(Employee e,string BtnSubmit)
         {
             switch (BtnSubmit)
@@ -82,7 +96,12 @@ namespace MVC学习.Controllers
                         CreateEmployeeViewModel vm = new CreateEmployeeViewModel();
                         vm.FirstName = e.FirstName;
                         vm.LastName = e.LastName;
-                        if(e.Salary.ToString() !="")
+                        //vm.FooterData = new FooterViewModel();
+                        //vm.FooterData.CompanyName = "StepByStepSchools";
+                        //vm.FooterData.Year = DateTime.Now.Year.ToString();
+                        //vm.UserName = User.Identity.Name;
+
+                        if (e.Salary.ToString() !="")
                         {
                             vm.Salary = e.Salary.ToString();
                         }
@@ -97,6 +116,17 @@ namespace MVC学习.Controllers
                     return RedirectToAction("AddNew");
             }
             return new EmptyResult();
+        }
+        public ActionResult GetAddNewLink()
+        {
+            if (Convert.ToBoolean(Session["IsAdmin"]))
+            {
+                return PartialView("AddNewLink");
+            }
+            else
+            {
+                return new EmptyResult();
+            }
         }
     }
 }
