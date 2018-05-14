@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model  HandleErrorInfo
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -7,8 +8,9 @@
 </head>
 <body>
     <hgroup>
-        <h1>错误。</h1>
-        <h2>处理你的请求时出错。</h2>
+        <h1>ErrorMessage :@Model.Exception.Message</h1>
+        <h2>Controller :@Model.ControllerName</h2>
+        ActionName:@Model.ActionName
     </hgroup>
 </body>
 </html>

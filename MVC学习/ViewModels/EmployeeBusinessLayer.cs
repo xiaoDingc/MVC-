@@ -2,6 +2,7 @@
 using MVC学习.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web;
 
@@ -41,5 +42,20 @@ namespace MVC学习.ViewModels
             }
         }
        
+        public void UploadEmployee(List<Employee> employees)
+        {
+            try
+            {
+                SalesERPDAL salesErp = new SalesERPDAL();
+                salesErp.Employees.AddRange(employees);
+                salesErp.SaveChanges();
+            }
+            catch (DbEntityValidationException dEx)
+            {
+
+                Console.WriteLine(dEx.Message);
+            }
+           
+        }
     }
 }
