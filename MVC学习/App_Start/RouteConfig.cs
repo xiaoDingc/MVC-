@@ -14,20 +14,20 @@ namespace MVC学习
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                 name: "MyRoute",
-                 url: "Employee/{EmpId}",
-                 defaults: new
-                 {
+                 "MyRoute",
+                 "Employee/{EmpId}",
+                 new {
                      Controller = "Employee",
-                     Action = "GetId",
-                     EmpId = "\\d+"
-                 }
+                     action = "GetId"
+                 },
+                 new {EmpId="\\d+"}
+                 
                 );
 
             routes.MapRoute(
                 name:"Upload",
                 url:"Employee/BulkUpload",
-                defaults:new {Controller="BulkUpload",action="index"}
+                defaults:new {Controller="BulkUpload",action="Index"}
                 );
             routes.MapRoute(
                 name: "Default",

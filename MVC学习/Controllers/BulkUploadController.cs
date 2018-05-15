@@ -27,26 +27,11 @@ namespace MVC学习.Controllers
 
         [AdminFilter]
         [HeaderFooterFilter]
-        public async Task<ActionResult> Upload(FileUploadViewModel mode)
-        {
-            int t1 = Thread.CurrentThread.ManagedThreadId;
-            List<Employee> employees = await Task.Factory.StartNew<List<Employee>>
-                (() => GetEmployee(mode));
-
-            int t2 = Thread.CurrentThread.ManagedThreadId;
-            EmployeeBusinessLayer employeeBusinessLayer = new EmployeeBusinessLayer();
-            employeeBusinessLayer.UploadEmployee(employees);
-            return RedirectToAction("Index", "Employee");
-        }
-        private List<Employee> GetEmployee(FileUploadViewModel model)
-        {
-            List<Employee> employees = new List<Employee>();
-
         public async Task<ActionResult>  Upload(FileUploadViewModel model)
         {
             int t1 = Thread.CurrentThread.ManagedThreadId;
             List<Employee> employees = await 
-                Task.Factory.StartNew<List<Employee>>(() => GetEmployees(model));
+                Task.Factory.StartNew(() => GetEmployees(model));
             int t2 = Thread.CurrentThread.ManagedThreadId;
             EmployeeBusinessLayer bal = new EmployeeBusinessLayer();
             bal.UploadEmployee(employees);
@@ -55,7 +40,7 @@ namespace MVC学习.Controllers
         }
         private List<Employee> GetEmployees(FileUploadViewModel model)
         {
-            List<Employee> employee = new List<Employee>();
+            List<Employee> employees = new List<Employee>();
 
             StreamReader csvReader = new StreamReader(model.fileUpload.InputStream);
             csvReader.ReadLine();
@@ -72,19 +57,7 @@ namespace MVC学习.Controllers
             }
             return employees;
         }
-
-
-                var values = line.Split(new char[] { ',' });
-                Employee e = new Employee();
-                e.FirstName = values[0];
-                e.LastName = values[1];
-                e.Salary = int.Parse(values[2]);
-                //e.EmployeeId = int.Parse(values[3]);
-                employee.Add(e);
-            }
-            return employee;
             
-        }
 
     }
 }

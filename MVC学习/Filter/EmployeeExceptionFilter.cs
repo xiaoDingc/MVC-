@@ -12,7 +12,7 @@ namespace MVC学习.Filter
         public override void OnException(ExceptionContext filterContext)
         {
             FileLogger fLog = new FileLogger();
-            fLog.LoggerException(filterContext.Exception);
+            fLog.LogException(filterContext.Exception);
             base.OnException(filterContext);
         }
     }
