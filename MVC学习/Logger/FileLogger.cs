@@ -20,6 +20,7 @@ namespace MVC学习.Logger
                     "message"+e.Message,
                    "StackTrace"+e.StackTrace
                 });
+
         }
     }
 }

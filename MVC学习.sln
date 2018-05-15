@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC学习", "MVC学习\MVC学习.csproj", "{EF517A2B-F082-4925-AA21-FE4AC5F4BF8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServeSocket", "ServeSocket\ServeSocket.csproj", "{6ECBB05E-C8CF-4C6E-BE02-B807D583F06F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientSocket", "ClientSocket\ClientSocket.csproj", "{342BE0E5-0B49-48D6-A2DE-DEF4C8794A0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{EF517A2B-F082-4925-AA21-FE4AC5F4BF8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF517A2B-F082-4925-AA21-FE4AC5F4BF8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF517A2B-F082-4925-AA21-FE4AC5F4BF8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ECBB05E-C8CF-4C6E-BE02-B807D583F06F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ECBB05E-C8CF-4C6E-BE02-B807D583F06F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ECBB05E-C8CF-4C6E-BE02-B807D583F06F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ECBB05E-C8CF-4C6E-BE02-B807D583F06F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{342BE0E5-0B49-48D6-A2DE-DEF4C8794A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{342BE0E5-0B49-48D6-A2DE-DEF4C8794A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{342BE0E5-0B49-48D6-A2DE-DEF4C8794A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{342BE0E5-0B49-48D6-A2DE-DEF4C8794A0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

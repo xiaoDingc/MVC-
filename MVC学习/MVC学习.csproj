@@ -220,6 +220,7 @@
     <Content Include="Views\Shared\AddNewLink.cshtml" />
     <Content Include="Views\Shared\MyLayout.cshtml" />
     <Content Include="Views\BulkUpload\Index.cshtml" />
+    <Content Include="Views\Employee\GetId.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

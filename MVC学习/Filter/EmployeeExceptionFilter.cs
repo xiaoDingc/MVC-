@@ -11,8 +11,8 @@ namespace MVC学习.Filter
     {
         public override void OnException(ExceptionContext filterContext)
         {
-            FileLogger fileLogger = new FileLogger();
-            fileLogger.LogException(filterContext.Exception);
+            FileLogger fLog = new FileLogger();
+            fLog.LoggerException(filterContext.Exception);
             base.OnException(filterContext);
         }
     }

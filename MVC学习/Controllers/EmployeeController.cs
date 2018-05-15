@@ -15,6 +15,11 @@ namespace MVC学习.Controllers
         {
             return "this is test GetString";
         }
+        public ActionResult GetId(int EmpId)
+        {
+            return View();
+        }
+
         public Customer GetCustomer()
         {
             Customer c = new Customer();

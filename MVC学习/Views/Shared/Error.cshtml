@@ -1,4 +1,4 @@
-﻿@model HandleErrorInfo
+﻿@model  HandleErrorInfo
 
 <!DOCTYPE html>
 <html>
@@ -9,11 +9,9 @@
 </head>
 <body>
     <hgroup>
-        Error Message :@Model.Exception.Message
-        <br />
-         Controller: @Model.ControllerName
-        <br />
-         Action: @Model.ActionName
+        <h1>ErrorMessage :@Model.Exception.Message</h1>
+        <h2>Controller :@Model.ControllerName</h2>
+        ActionName:@Model.ActionName
     </hgroup>
 </body>
 </html>
