@@ -41,5 +41,11 @@ namespace MVC学习.ViewModels
             }
         }
        
+        public void UploadEmployee(List<Employee> employee)
+        {
+            SalesERPDAL salesERPDAL = new SalesERPDAL();
+            salesERPDAL.Employees.AddRange(employee);
+            salesERPDAL.SaveChanges();
+        }
     }
 }

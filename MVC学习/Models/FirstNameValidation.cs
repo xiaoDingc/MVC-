@@ -16,9 +16,9 @@ namespace MVC学习.Models
             }
             else
             {
-                if (!value.ToString().Contains("@"))
+                if (value.ToString().Contains("@"))
                 {
-                    return new ValidationResult("First Name should contain @");
+                    return new ValidationResult("First Name should not contain @");
                 }
             }
             return ValidationResult.Success;

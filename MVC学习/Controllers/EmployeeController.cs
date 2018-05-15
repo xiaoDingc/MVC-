@@ -10,11 +10,7 @@ namespace MVC学习.Controllers
 {
     public class EmployeeController : Controller
     {
-        // GET: Test
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
+
         public string GetString()
         {
             return "this is test GetString";
@@ -26,11 +22,7 @@ namespace MVC学习.Controllers
             c.Address = "Address1";
             return c;
         }
-        [NonAction]
-        public string SimpleMethod()
-        {
-            return "great simple";
-        }
+
         [Authorize]
         [HeaderFooterFilter]
         public ActionResult Index()
