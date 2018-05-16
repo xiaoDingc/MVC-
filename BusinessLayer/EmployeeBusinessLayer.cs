@@ -1,12 +1,12 @@
-﻿using MVC学习.Data_Access_Layer;
-using MVC学习.Models;
+﻿using DataAccessLayer;
+using BusinessEntities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web;
 
-namespace MVC学习.ViewModels
+namespace BusinessLayer
 {
     public class EmployeeBusinessLayer
     {

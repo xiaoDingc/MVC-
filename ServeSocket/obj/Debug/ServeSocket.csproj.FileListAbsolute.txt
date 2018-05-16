@@ -4,3 +4,9 @@ C:\Users\dc\Desktop\葡萄牙学习\MVC学习\ServeSocket\bin\Debug\ServeSocket.
 C:\Users\dc\Desktop\葡萄牙学习\MVC学习\ServeSocket\obj\Debug\ServeSocket.csprojResolveAssemblyReference.cache
 C:\Users\dc\Desktop\葡萄牙学习\MVC学习\ServeSocket\obj\Debug\ServeSocket.exe
 C:\Users\dc\Desktop\葡萄牙学习\MVC学习\ServeSocket\obj\Debug\ServeSocket.pdb
+C:\Users\dc\Desktop\学习\C#程序\葡萄牙MVC\ServeSocket\bin\Debug\ServeSocket.exe.config
+C:\Users\dc\Desktop\学习\C#程序\葡萄牙MVC\ServeSocket\bin\Debug\ServeSocket.exe
+C:\Users\dc\Desktop\学习\C#程序\葡萄牙MVC\ServeSocket\bin\Debug\ServeSocket.pdb
+C:\Users\dc\Desktop\学习\C#程序\葡萄牙MVC\ServeSocket\obj\Debug\ServeSocket.csproj.CoreCompileInputs.cache
+C:\Users\dc\Desktop\学习\C#程序\葡萄牙MVC\ServeSocket\obj\Debug\ServeSocket.exe
+C:\Users\dc\Desktop\学习\C#程序\葡萄牙MVC\ServeSocket\obj\Debug\ServeSocket.pdb

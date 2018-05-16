@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace MVC学习.Models
+namespace BusinessEntities
 {
     public class Employee
     {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,18 +10,36 @@ using System.Timers;
 
 namespace ServeSocket
 {
+    enum week {
+        m=1,
+        n=2,
+        c=3,
+    }
+
     class Program
     {
         static  Byte[] buf = new byte[1024];
         static void Main(string[] args)
         {
-            var socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            socket.Bind(new IPEndPoint(IPAddress.Any, 4546));
-            socket.Listen(10);
-            Console.WriteLine("服务器端创建成功");
-            socket.BeginAccept(new AsyncCallback(AcceptMessage), socket);
-
-      
+            //var socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            //socket.Bind(new IPEndPoint(IPAddress.Any, 4546));
+            //socket.Listen(10);
+            //Console.WriteLine("服务器端创建成功");
+            //socket.BeginAccept(new AsyncCallback(AcceptMessage), socket);
+            int sum = 0;
+            int.TryParse("1234",out sum);
+            Console.WriteLine(sum);
+            week wec=(week)1;
+            Console.WriteLine(wec==week.m);
+            ArrayList arrayList = new ArrayList();
+            arrayList.Add("123");
+            arrayList.Add(123);
+            arrayList.Add("abc");
+            List<int> c = new List<int>();
+            foreach (var item in arrayList)
+            {
+                Console.WriteLine(item);
+            }
             Console.ReadKey();
         }
         public static void AcceptMessage(IAsyncResult ar)

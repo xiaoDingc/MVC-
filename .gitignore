@@ -4,3 +4,16 @@ MVC学习/Web.Debug.config
 MVC学习/bin/
 MVC学习/obj/
 packages/
+BusinessLayer/bin/
+BusinessEntities/obj/
+BusinessLaye/obj/
+BusinessLayer/obj/
+DataAccessLayer/bin/
+DataAccessLayer/obj/
+ViewModel/obj/
+ViewModel/bin/
+ServeSocket/obj/
+ClientSocket/obj/
+*.csproj
+*.user
+*.pdb

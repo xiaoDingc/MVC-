@@ -1,17 +1,11 @@
-﻿using MVC学习.Filter;
-using MVC学习.Models;
-using MVC学习.ViewModels;
-using System;
+﻿using BusinessEntities;
+using MVC学习.Filter;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
-
-using System.Web.Mvc.Async;
-
+using ViewModel;
 
 namespace MVC学习.Controllers
 {
@@ -43,17 +37,21 @@ namespace MVC学习.Controllers
             List<Employee> employees = new List<Employee>();
 
             StreamReader csvReader = new StreamReader(model.fileUpload.InputStream);
-            csvReader.ReadLine();
+            //csvReader.ReadLine();
             while (!csvReader.EndOfStream)
             {
                 var line = csvReader.ReadLine();
+                if (line != "")
+                {
+                    var values = line.Split(',');
+                    Employee employee = new Employee();
+                    employee.FirstName = values[0];
+                    employee.LastName = values[1];
+                    employee.Salary = int.Parse(values[2]);
+                    employees.Add(employee);
+                }
 
-                var values = line.Split(',');
-                Employee employee = new Employee();
-                employee.FirstName = values[0];
-                employee.LastName = values[1];
-                employee.Salary = int.Parse(values[2]);
-                employees.Add(employee);
+          
             }
             return employees;
         }

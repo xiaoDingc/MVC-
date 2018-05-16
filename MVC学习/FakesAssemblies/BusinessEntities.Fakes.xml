@@ -1,0 +1,344 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BusinessEntities.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:BusinessEntities.Fakes.ShimCustomer">
+            <summary>BusinessEntities.Customer 的填充码类型</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimCustomer.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimCustomer.#ctor(BusinessEntities.Customer)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimCustomer.AddressGet">
+            <summary>设置 Customer.get_Address() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimCustomer.AddressSetString">
+            <summary>设置 Customer.set_Address(String value) 的 填充码</summary>
+        </member>
+        <member name="T:BusinessEntities.Fakes.ShimCustomer.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimCustomer.AllInstances.AddressGet">
+            <summary>设置 Customer.get_Address() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimCustomer.AllInstances.AddressSetString">
+            <summary>设置 Customer.set_Address(String value) 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimCustomer.AllInstances.CustomerNameGet">
+            <summary>设置 Customer.get_CustomerName() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimCustomer.AllInstances.CustomerNameSetString">
+            <summary>设置 Customer.set_CustomerName(String value) 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimCustomer.AllInstances.ToString01">
+            <summary>设置 Customer.ToString() 的 填充码</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimCustomer.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimCustomer.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimCustomer.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimCustomer.Constructor">
+            <summary>设置 Customer.Customer() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimCustomer.CustomerNameGet">
+            <summary>设置 Customer.get_CustomerName() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimCustomer.CustomerNameSetString">
+            <summary>设置 Customer.set_CustomerName(String value) 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimCustomer.ToString">
+            <summary>设置 Customer.ToString() 的 填充码</summary>
+        </member>
+        <member name="T:BusinessEntities.Fakes.ShimEmployee">
+            <summary>BusinessEntities.Employee 的填充码类型</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimEmployee.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimEmployee.#ctor(BusinessEntities.Employee)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:BusinessEntities.Fakes.ShimEmployee.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.AllInstances.EmployeeIdGet">
+            <summary>设置 Employee.get_EmployeeId() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.AllInstances.EmployeeIdSetInt32">
+            <summary>设置 Employee.set_EmployeeId(Int32 value) 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.AllInstances.FirstNameGet">
+            <summary>设置 Employee.get_FirstName() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.AllInstances.FirstNameSetString">
+            <summary>设置 Employee.set_FirstName(String value) 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.AllInstances.LastNameGet">
+            <summary>设置 Employee.get_LastName() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.AllInstances.LastNameSetString">
+            <summary>设置 Employee.set_LastName(String value) 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.AllInstances.SalaryGet">
+            <summary>设置 Employee.get_Salary() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.AllInstances.SalarySetInt32">
+            <summary>设置 Employee.set_Salary(Int32 value) 的 填充码</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimEmployee.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimEmployee.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.Constructor">
+            <summary>设置 Employee.Employee() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.EmployeeIdGet">
+            <summary>设置 Employee.get_EmployeeId() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.EmployeeIdSetInt32">
+            <summary>设置 Employee.set_EmployeeId(Int32 value) 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.FirstNameGet">
+            <summary>设置 Employee.get_FirstName() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.FirstNameSetString">
+            <summary>设置 Employee.set_FirstName(String value) 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.LastNameGet">
+            <summary>设置 Employee.get_LastName() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.LastNameSetString">
+            <summary>设置 Employee.set_LastName(String value) 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.SalaryGet">
+            <summary>设置 Employee.get_Salary() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimEmployee.SalarySetInt32">
+            <summary>设置 Employee.set_Salary(Int32 value) 的 填充码</summary>
+        </member>
+        <member name="T:BusinessEntities.Fakes.ShimFirstNameValidation">
+            <summary>BusinessEntities.FirstNameValidation 的填充码类型</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimFirstNameValidation.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimFirstNameValidation.#ctor(BusinessEntities.FirstNameValidation)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:BusinessEntities.Fakes.ShimFirstNameValidation.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimFirstNameValidation.AllInstances.IsValidObjectValidationContext">
+            <summary>设置 FirstNameValidation.IsValid(Object value, ValidationContext validationContext) 的 填充码</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimFirstNameValidation.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimFirstNameValidation.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimFirstNameValidation.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimFirstNameValidation.Constructor">
+            <summary>设置 FirstNameValidation.FirstNameValidation() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimFirstNameValidation.IsValidObjectValidationContext">
+            <summary>设置 FirstNameValidation.IsValid(Object value, ValidationContext validationContext) 的 填充码</summary>
+        </member>
+        <member name="T:BusinessEntities.Fakes.ShimUserDetails">
+            <summary>BusinessEntities.UserDetails 的填充码类型</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimUserDetails.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimUserDetails.#ctor(BusinessEntities.UserDetails)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="T:BusinessEntities.Fakes.ShimUserDetails.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimUserDetails.AllInstances.PasswordGet">
+            <summary>设置 UserDetails.get_Password() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimUserDetails.AllInstances.PasswordSetString">
+            <summary>设置 UserDetails.set_Password(String value) 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimUserDetails.AllInstances.UserNameGet">
+            <summary>设置 UserDetails.get_UserName() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimUserDetails.AllInstances.UserNameSetString">
+            <summary>设置 UserDetails.set_UserName(String value) 的 填充码</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimUserDetails.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.ShimUserDetails.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimUserDetails.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimUserDetails.Constructor">
+            <summary>设置 UserDetails.UserDetails() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimUserDetails.PasswordGet">
+            <summary>设置 UserDetails.get_Password() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimUserDetails.PasswordSetString">
+            <summary>设置 UserDetails.set_Password(String value) 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimUserDetails.UserNameGet">
+            <summary>设置 UserDetails.get_UserName() 的 填充码</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.ShimUserDetails.UserNameSetString">
+            <summary>设置 UserDetails.set_UserName(String value) 的 填充码</summary>
+        </member>
+        <member name="T:BusinessEntities.Fakes.StubCustomer">
+            <summary>BusinessEntities.Customer 的存根类型</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubCustomer.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.StubCustomer.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubCustomer.InitializeStub">
+            <summary>初始化 type StubCustomer 的新实例</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.StubCustomer.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.StubCustomer.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubCustomer.ToString">
+            <summary>设置 Customer.ToString() 的 存根</summary>
+        </member>
+        <member name="F:BusinessEntities.Fakes.StubCustomer.ToString01">
+            <summary>设置 Customer.ToString() 的 stub</summary>
+        </member>
+        <member name="T:BusinessEntities.Fakes.StubEmployee">
+            <summary>BusinessEntities.Employee 的存根类型</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubEmployee.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.StubEmployee.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubEmployee.InitializeStub">
+            <summary>初始化 type StubEmployee 的新实例</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.StubEmployee.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.StubEmployee.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:BusinessEntities.Fakes.StubFirstNameValidation">
+            <summary>BusinessEntities.FirstNameValidation 的存根类型</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubFirstNameValidation.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.StubFirstNameValidation.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubFirstNameValidation.Equals(System.Object)">
+            <summary>设置 Attribute.Equals(Object obj) 的 存根</summary>
+        </member>
+        <member name="F:BusinessEntities.Fakes.StubFirstNameValidation.EqualsObject">
+            <summary>设置 Attribute.Equals(Object obj) 的 stub</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubFirstNameValidation.FormatErrorMessage(System.String)">
+            <summary>设置 ValidationAttribute.FormatErrorMessage(String name) 的 存根</summary>
+        </member>
+        <member name="F:BusinessEntities.Fakes.StubFirstNameValidation.FormatErrorMessageString">
+            <summary>设置 ValidationAttribute.FormatErrorMessage(String name) 的 stub</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubFirstNameValidation.GetHashCode">
+            <summary>设置 Attribute.GetHashCode() 的 存根</summary>
+        </member>
+        <member name="F:BusinessEntities.Fakes.StubFirstNameValidation.GetHashCode01">
+            <summary>设置 Attribute.GetHashCode() 的 stub</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubFirstNameValidation.InitializeStub">
+            <summary>初始化 type StubFirstNameValidation 的新实例</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.StubFirstNameValidation.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.StubFirstNameValidation.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubFirstNameValidation.IsDefaultAttribute">
+            <summary>设置 Attribute.IsDefaultAttribute() 的 存根</summary>
+        </member>
+        <member name="F:BusinessEntities.Fakes.StubFirstNameValidation.IsDefaultAttribute01">
+            <summary>设置 Attribute.IsDefaultAttribute() 的 stub</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubFirstNameValidation.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>设置 FirstNameValidation.IsValid(Object value, ValidationContext validationContext) 的 存根</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubFirstNameValidation.IsValid(System.Object)">
+            <summary>设置 ValidationAttribute.IsValid(Object value) 的 存根</summary>
+        </member>
+        <member name="F:BusinessEntities.Fakes.StubFirstNameValidation.IsValidObject">
+            <summary>设置 ValidationAttribute.IsValid(Object value) 的 stub</summary>
+        </member>
+        <member name="F:BusinessEntities.Fakes.StubFirstNameValidation.IsValidObjectValidationContext">
+            <summary>设置 FirstNameValidation.IsValid(Object value, ValidationContext validationContext) 的 stub</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubFirstNameValidation.Match(System.Object)">
+            <summary>设置 Attribute.Match(Object obj) 的 存根</summary>
+        </member>
+        <member name="F:BusinessEntities.Fakes.StubFirstNameValidation.MatchObject">
+            <summary>设置 Attribute.Match(Object obj) 的 stub</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.StubFirstNameValidation.RequiresValidationContext">
+            <summary>设置 ValidationAttribute.get_RequiresValidationContext() 的 stub</summary>
+        </member>
+        <member name="F:BusinessEntities.Fakes.StubFirstNameValidation.RequiresValidationContextGet">
+            <summary>设置 ValidationAttribute.get_RequiresValidationContext() 的 stub</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.StubFirstNameValidation.TypeId">
+            <summary>设置 Attribute.get_TypeId() 的 stub</summary>
+        </member>
+        <member name="F:BusinessEntities.Fakes.StubFirstNameValidation.TypeIdGet">
+            <summary>设置 Attribute.get_TypeId() 的 stub</summary>
+        </member>
+        <member name="T:BusinessEntities.Fakes.StubUserDetails">
+            <summary>BusinessEntities.UserDetails 的存根类型</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubUserDetails.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.StubUserDetails.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="M:BusinessEntities.Fakes.StubUserDetails.InitializeStub">
+            <summary>初始化 type StubUserDetails 的新实例</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.StubUserDetails.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:BusinessEntities.Fakes.StubUserDetails.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+    </members>
+</doc>
